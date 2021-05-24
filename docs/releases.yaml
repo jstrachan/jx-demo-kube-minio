@@ -195,8 +195,6 @@
     sources:
     - https://github.com/minio/operator
     type: application
-  - name: ../charts/minio-tenant
-    repositoryName: ..
 - namespace: nginx
   path: helmfiles/nginx/helmfile.yaml
   releases:

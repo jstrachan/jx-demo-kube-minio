@@ -87,12 +87,6 @@
 	      <td><a href='https://min.io'>source</a></td>
 	    </tr>
     <tr>
-	      <td><a href='' title=''> <img src='' width='24px' height='24px'> ../charts/minio-tenant </a></td>
-	      <td></td>
-	      <td></td>
-	      <td></td>
-	    </tr>
-    <tr>
 		      <td colspan='4'><h3>nginx</h3></td>
 		    </tr>
 	    <tr>
