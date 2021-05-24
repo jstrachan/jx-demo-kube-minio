@@ -1,8 +1,184 @@
 - namespace: jx
   path: helmfiles/jx/helmfile.yaml
+  releases:
+  - apiVersion: v1
+    appVersion: 1.0.54
+    description: A Helm chart for the resources for JX Boot
+    firstDeployed: "2021-05-24T11:11:23Z"
+    home: https://github.com/jenkins-x-charts/jxboot-helmfile-resources
+    icon: https://raw.githubusercontent.com/jenkins-x/jenkins-x-website/master/images/logo/jenkinsx-icon-color.svg
+    ingresses:
+    - name: bucketrepo
+      url: http://bucketrepo-jx.change.me/
+    - name: hook
+      url: http://hook-jx.change.me/hook
+    lastDeployed: "2021-05-24T11:11:23Z"
+    name: jxboot-helmfile-resources
+    repositoryName: jx3
+    repositoryUrl: https://storage.googleapis.com/jenkinsxio/charts
+    resourcePath: config-root/namespaces/jx/jxboot-helmfile-resources
+    version: 1.0.54
+  - apiVersion: v1
+    appVersion: 1.6.6
+    applicationUrl: http://dashboard-jx.change.me
+    description: Web UI for Jenkins X, with a clear goal - visualize the pipelines - and their logs.
+    firstDeployed: "2021-05-24T11:11:26Z"
+    home: https://github.com/jenkins-x/jx-pipelines-visualizer
+    icon: https://raw.githubusercontent.com/jenkins-x/jenkins-x-website/master/images/logo/jenkinsx-icon-color.svg
+    ingresses:
+    - name: jx-pipelines-visualizer
+      url: http://dashboard-jx.change.me
+    lastDeployed: "2021-05-24T11:11:26Z"
+    name: jx-pipelines-visualizer
+    repositoryName: jx3
+    repositoryUrl: https://storage.googleapis.com/jenkinsxio/charts
+    resourcePath: config-root/namespaces/jx/jx-pipelines-visualizer
+    sources:
+    - https://github.com/jenkins-x/jx-pipelines-visualizer
+    version: 1.6.6
+  - apiVersion: v1
+    description: 'This chart installs the jx-preview CRD and garbagecollection job '
+    firstDeployed: "2021-05-24T11:11:30Z"
+    home: https://github.com/jenkins-x-plugins/jx-preview
+    icon: https://raw.githubusercontent.com/jenkins-x/jenkins-x-website/master/images/logo/jenkinsx-icon-color.svg
+    lastDeployed: "2021-05-24T11:11:30Z"
+    name: jx-preview
+    repositoryName: jxgh
+    repositoryUrl: https://jenkins-x-charts.github.io/repo
+    resourcePath: config-root/namespaces/jx/jx-preview
+    version: 0.0.182
+  - apiVersion: v1
+    description: 'This chart bootstraps installation of [Lighthouse](https://github.com/jenkins-x/lighthouse). '
+    firstDeployed: "2021-05-24T11:11:33Z"
+    home: https://github.com/jenkins-x/lighthouse
+    icon: https://raw.githubusercontent.com/jenkins-x/jenkins-x-website/master/images/logo/jenkinsx-icon-color.svg
+    lastDeployed: "2021-05-24T11:11:33Z"
+    name: lighthouse
+    repositoryName: jx3
+    repositoryUrl: https://storage.googleapis.com/jenkinsxio/charts
+    resourcePath: config-root/namespaces/jx/lighthouse
+    version: 1.0.43
+  - apiVersion: v1
+    appVersion: 0.1.62
+    description: A Helm chart for bucketrepo service
+    firstDeployed: "2021-05-24T11:11:35Z"
+    icon: https://raw.githubusercontent.com/jenkins-x/jenkins-x-platform/d273e09/images/go.png
+    lastDeployed: "2021-05-24T11:11:35Z"
+    name: bucketrepo
+    repositoryName: jx3
+    repositoryUrl: https://storage.googleapis.com/jenkinsxio/charts
+    resourcePath: config-root/namespaces/jx/bucketrepo
+    version: 0.1.62
+  - apiVersion: v2
+    appVersion: 3.0.0
+    description: Jenkins X next gen cloud CI / CD platform for Kubernetes
+    firstDeployed: "2021-05-24T11:11:38Z"
+    home: https://jenkins-x.io/
+    icon: https://raw.githubusercontent.com/jenkins-x/jenkins-x-website/master/images/logo/jenkinsx-icon-color.svg
+    lastDeployed: "2021-05-24T11:11:38Z"
+    maintainers:
+    - email: jenkins-x@googlegroups.com
+      name: Jenkins X Team
+    name: jx-build-controller
+    repositoryName: jx3
+    repositoryUrl: https://storage.googleapis.com/jenkinsxio/charts
+    resourcePath: config-root/namespaces/jx/jx-build-controller
+    sources:
+    - https://github.com/jenkins-x-plugins/jx-build-controller
+    version: 0.2.8
+  - apiVersion: v2
+    appVersion: 0.0.6
+    description: Local External Secrets
+    firstDeployed: "2021-05-24T11:11:40Z"
+    icon: https://raw.githubusercontent.com/jenkins-x/jenkins-x-platform/d273e09/images/go.png
+    lastDeployed: "2021-05-24T11:11:40Z"
+    name: local-external-secrets
+    repositoryName: jx3
+    repositoryUrl: https://storage.googleapis.com/jenkinsxio/charts
+    resourcePath: config-root/namespaces/jx/local-external-secrets
+    version: 0.0.6
+  - apiVersion: v2
+    appVersion: 3.0.0
+    description: Jenkins X next gen cloud CI / CD platform for Kubernetes
+    firstDeployed: "2021-05-24T11:11:43Z"
+    home: https://jenkins-x.io/
+    icon: https://jenkins-x.github.io/jenkins-x-website/img/profile.png
+    lastDeployed: "2021-05-24T11:11:43Z"
+    maintainers:
+    - email: jenkins-x@googlegroups.com
+      name: Jenkins X Team
+    name: jx-kh-check
+    repositoryName: jx3
+    repositoryUrl: https://storage.googleapis.com/jenkinsxio/charts
+    resourcePath: config-root/namespaces/jx/jx-kh-check-health-checks-jx
+    sources:
+    - https://github.com/jenkins-x-plugins/jx-kh-check
+    version: 0.0.56
 - namespace: kuberhealthy
-  path: helmfiles/kuberhealthy/helmfile.yaml
+  path: helmfiles/minio/helmfile.yaml
+  releases:
+  - apiVersion: v2
+    appVersion: v4.0.11
+    description: A Helm chart for MinIO Operator
+    firstDeployed: "2021-05-24T11:11:58Z"
+    home: https://min.io
+    icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+    keywords:
+    - storage
+    - object-storage
+    - S3
+    lastDeployed: "2021-05-24T11:11:58Z"
+    maintainers:
+    - email: dev@minio.io
+      name: MinIO, Inc
+    name: minio-operator
+    repositoryName: minio
+    repositoryUrl: https://operator.min.io/
+    resourcePath: config-root/namespaces/kuberhealthy/minio-operator
+    sources:
+    - https://github.com/minio/operator
+    type: application
+  - name: ../charts/minio-tenant
+    repositoryName: ..
 - namespace: nginx
   path: helmfiles/nginx/helmfile.yaml
+  releases:
+  - annotations:
+      artifacthub.io/changes: |
+        - Remove helm2 support and update docs
+    apiVersion: v2
+    appVersion: 0.41.2
+    description: Ingress controller for Kubernetes using NGINX as a reverse proxy and load balancer
+    firstDeployed: "2021-05-24T11:12:06Z"
+    home: https://github.com/kubernetes/ingress-nginx
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/500px-Nginx_logo.svg.png
+    keywords:
+    - ingress
+    - nginx
+    kubeVersion: '>=1.16.0-0'
+    lastDeployed: "2021-05-24T11:12:06Z"
+    maintainers:
+    - name: ChiefAlexander
+    name: ingress-nginx
+    repositoryName: ingress-nginx
+    repositoryUrl: https://kubernetes.github.io/ingress-nginx
+    resourcePath: config-root/namespaces/nginx/ingress-nginx-nginx-ingress
+    sources:
+    - https://github.com/kubernetes/ingress-nginx
+    type: application
+    version: 3.12.0
 - namespace: tekton-pipelines
   path: helmfiles/tekton-pipelines/helmfile.yaml
+  releases:
+  - apiVersion: v1
+    appVersion: 0.24.1
+    description: A Helm chart for Tekton Pipelines
+    firstDeployed: "2021-05-24T11:12:14Z"
+    home: https://github.com/cdfoundation/tekton-helm-chart
+    icon: https://avatars2.githubusercontent.com/u/47602533
+    lastDeployed: "2021-05-24T11:12:14Z"
+    name: tekton-pipeline
+    repositoryName: cdf
+    repositoryUrl: https://cdfoundation.github.io/tekton-helm-chart
+    resourcePath: config-root/namespaces/tekton-pipelines/tekton-pipeline
+    version: 0.24.1
