@@ -1,9 +1,9 @@
-# Source: minio-operator/templates/console-deployment.yaml
+# Source: minio-operator/templates/operator-deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: minio-operator-console
-  namespace: kuberhealthy
+  name: "minio-operator"
+  namespace: minio
   labels:
     helm.sh/chart: minio-operator-4.0.11
     app.kubernetes.io/name: minio-operator
@@ -19,26 +19,25 @@ spec:
   selector:
     matchLabels:
       app.kubernetes.io/name: minio-operator
-      app.kubernetes.io/instance: minio-operator-console
+      app.kubernetes.io/instance: minio-operator
   template:
     metadata:
       labels:
         app.kubernetes.io/name: minio-operator
-        app.kubernetes.io/instance: minio-operator-console
+        app.kubernetes.io/instance: minio-operator
     spec:
-      serviceAccountName: console-sa
+      serviceAccountName: minio-operator
+      securityContext:
+        fsGroup: 1000
+        runAsGroup: 1000
+        runAsNonRoot: true
+        runAsUser: 1000
       containers:
         - name: minio-operator
-          image: "minio/console:v0.6.8"
+          image: "minio/operator:v4.0.11"
           imagePullPolicy: IfNotPresent
-          ports:
-            - containerPort: 9090
-              name: http
-            - containerPort: 9443
-              name: https
-          args:
-            - server
-          env:
-            - name: CONSOLE_OPERATOR_MODE
-              value: "on"
-          resources: {}
+          resources:
+            requests:
+              cpu: 200m
+              ephemeral-storage: 500Mi
+              memory: 256Mi

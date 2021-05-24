@@ -3,7 +3,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: console-sa
-  namespace: kuberhealthy
+  namespace: minio
   annotations:
     meta.helm.sh/release-name: 'minio-operator'
   labels:

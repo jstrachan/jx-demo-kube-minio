@@ -115,26 +115,83 @@
     - https://github.com/jenkins-x-plugins/jx-kh-check
     version: 0.0.56
 - namespace: kuberhealthy
+  path: helmfiles/kuberhealthy/helmfile.yaml
+  releases:
+  - apiVersion: v2
+    appVersion: v2.4.1
+    description: An operator for synthetic test and monitoring. Works great with Prometheus.
+    firstDeployed: "2021-05-24T11:17:35Z"
+    home: https://comcast.github.io/kuberhealthy/
+    icon: https://raw.githubusercontent.com/Comcast/kuberhealthy/master/images/logo-square.png
+    keywords:
+    - kuberhealthy
+    - kubernetes
+    - operator
+    - monitoring
+    - synthetic
+    - testing
+    - comcast
+    - health
+    - prometheus
+    lastDeployed: "2021-05-24T11:17:35Z"
+    maintainers:
+    - email: eric.greer@comcast.com
+      name: integrii
+    - email: jacob.martin@comcast.com
+      name: lolimjake
+    - email: ianhoegen@gmail.com
+      name: ihoegen
+    - email: jonathan_phan@comcast.com
+      name: jonnydawg
+    - email: joshulyne_park@comcast.com
+      name: joshulyne
+    name: kuberhealthy
+    repositoryName: kuberhealthy
+    repositoryUrl: https://kuberhealthy.github.io/kuberhealthy/helm-repos
+    resourcePath: config-root/namespaces/kuberhealthy/kuberhealthy
+    sources:
+    - https://github.com/Comcast/kuberhealthy
+    - https://github.com/Comcast/kuberhealthy/tree/master/deploy/helm/kuberhealthy
+    type: application
+    version: "64"
+  - apiVersion: v2
+    appVersion: 3.0.0
+    description: Jenkins X next gen cloud CI / CD platform for Kubernetes
+    firstDeployed: "2021-05-24T11:17:38Z"
+    home: https://jenkins-x.io/
+    icon: https://jenkins-x.github.io/jenkins-x-website/img/profile.png
+    lastDeployed: "2021-05-24T11:17:38Z"
+    maintainers:
+    - email: jenkins-x@googlegroups.com
+      name: Jenkins X Team
+    name: jx-kh-check
+    repositoryName: jx3
+    repositoryUrl: https://storage.googleapis.com/jenkinsxio/charts
+    resourcePath: config-root/namespaces/kuberhealthy/jx-kh-check
+    sources:
+    - https://github.com/jenkins-x-plugins/jx-kh-check
+    version: 0.0.68
+- namespace: minio
   path: helmfiles/minio/helmfile.yaml
   releases:
   - apiVersion: v2
     appVersion: v4.0.11
     description: A Helm chart for MinIO Operator
-    firstDeployed: "2021-05-24T11:11:58Z"
+    firstDeployed: "2021-05-24T11:17:43Z"
     home: https://min.io
     icon: https://min.io/resources/img/logo/MINIO_wordmark.png
     keywords:
     - storage
     - object-storage
     - S3
-    lastDeployed: "2021-05-24T11:11:58Z"
+    lastDeployed: "2021-05-24T11:17:43Z"
     maintainers:
     - email: dev@minio.io
       name: MinIO, Inc
     name: minio-operator
     repositoryName: minio
     repositoryUrl: https://operator.min.io/
-    resourcePath: config-root/namespaces/kuberhealthy/minio-operator
+    resourcePath: config-root/namespaces/minio/minio-operator
     sources:
     - https://github.com/minio/operator
     type: application

@@ -3,7 +3,7 @@ apiVersion: minio.min.io/v2
 kind: Tenant
 metadata:
   name: minio1
-  namespace: kuberhealthy
+  namespace: minio
   ## Optionally pass labels to be applied to the statefulset pods
   labels:
     app: minio

@@ -14,7 +14,7 @@ metadata:
     prometheus.io/port: "9000"
     prometheus.io/scrape: "true"
     meta.helm.sh/release-name: 'minio-tenant'
-  namespace: kuberhealthy
+  namespace: minio
 ## If a scheduler is specified here, Tenant pods will be dispatched by specified scheduler.
 ## If not specified, the Tenant pods will be dispatched by default scheduler.
 # scheduler:

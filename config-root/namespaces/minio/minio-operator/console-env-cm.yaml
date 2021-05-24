@@ -6,7 +6,7 @@ data:
 kind: ConfigMap
 metadata:
   name: console-env
-  namespace: kuberhealthy
+  namespace: minio
   annotations:
     meta.helm.sh/release-name: 'minio-operator'
   labels:

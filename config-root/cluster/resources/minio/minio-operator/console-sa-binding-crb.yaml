@@ -1,8 +1,8 @@
-# Source: minio-operator/templates/cluster-role-binding.yaml
+# Source: minio-operator/templates/console-ui.yaml
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: minio-operator-binding
+  name: console-sa-binding
   annotations:
     meta.helm.sh/release-name: 'minio-operator'
   labels:
@@ -10,8 +10,8 @@ metadata:
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: minio-operator-role
+  name: console-sa-role
 subjects:
   - kind: ServiceAccount
-    name: minio-operator
-    namespace: kuberhealthy
+    name: console-sa
+    namespace: minio
