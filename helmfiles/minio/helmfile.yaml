@@ -12,9 +12,5 @@ releases:
   name: minio-operator
   values:
   - jx-values.yaml
-- chart: ../../charts/minio-tenant
-  name: minio-tenant
-  values:
-  - jx-values.yaml
 templates: {}
 renderedvalues: {}
