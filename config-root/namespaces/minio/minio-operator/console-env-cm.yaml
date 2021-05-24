@@ -1,0 +1,13 @@
+# Source: minio-operator/templates/console-ui.yaml
+apiVersion: v1
+data:
+  CONSOLE_PORT: "9090"
+  CONSOLE_TLS_PORT: "9443"
+kind: ConfigMap
+metadata:
+  name: console-env
+  namespace: minio
+  annotations:
+    meta.helm.sh/release-name: 'minio-operator'
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
